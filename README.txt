@@ -1,0 +1,1 @@
+wget --mirror --convert-links --page-requisites --adjust-extension -rl inf https://rrwindows.ca/?fbclid=IwAR1FtIf_3fzep_DCdGIOXO5t1_i47DUvRMo5RQNB3vkJE8oYs62gzFehwHs
