@@ -122,7 +122,26 @@ var et_core_api_spam_recaptcha = {"site_key":"","page_action":{"action":"contact
 }</style><style type="text/css" id="custom-background-css">
 body.custom-background { background-color: #1b4965; }
 </style>
-	<link rel="stylesheet" id="et-core-unified-44-cached-inline-styles" href="../wp-content/et-cache/44/et-core-unified-44-16767560154281.min.css" onerror="et_core_page_resource_fallback(this, true)" onload="et_core_page_resource_fallback(this)" /></head>
+	<!-- CSS for Bootstrap -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+	<style>
+		form#contact-form .form-control{
+			border-radius: 1px;
+		}
+
+		a {
+			text-decoration: none;
+		}
+	</style>
+	<!-- Email JS -->
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            // https://dashboard.emailjs.com/admin/account
+            emailjs.init('zvq1QvTnjeBmt34Ry');
+        })();
+    </script>
+</head>
 <body class="page-template-default page page-id-44 custom-background et_button_no_icon et_pb_button_helper_class et_fixed_nav et_show_nav et_primary_nav_dropdown_animation_fade et_secondary_nav_dropdown_animation_fade et_header_style_left et_pb_footer_columns4 et_cover_background et_pb_gutter et_pb_gutters3 et_pb_pagebuilder_layout et_no_sidebar et_divi_theme et-db et_minified_js et_minified_css">
 	<div id="page-container">
 
@@ -132,7 +151,7 @@ body.custom-background { background-color: #1b4965; }
 			<div class="container clearfix et_menu_container">
 							<div class="logo_container">
 					<span class="logo_helper"></span>
-					<a style="font-size: 150%;" href="/">
+					<a style="font-size: 130%; color: #03adfc;" href="/">
 						Edge Window Cleaning
 					</a>
 				</div>
@@ -234,9 +253,9 @@ body.custom-background { background-color: #1b4965; }
 				
 				
 				<div class="et_pb_blurb_content">
-					<div class="et_pb_main_blurb_image"><a href="mailto:hello@rrwindows.ca"><span class="et_pb_image_wrap"><span class="et-waypoint et_pb_animation_top et-pb-icon">&#xe081;</span></span></a></div>
+					<div class="et_pb_main_blurb_image"><a href="mailto:edgewindow@hotmail.com"><span class="et_pb_image_wrap"><span class="et-waypoint et_pb_animation_top et-pb-icon">&#xe081;</span></span></a></div>
 					<div class="et_pb_blurb_container">
-						<h4 class="et_pb_module_header"><a href="mailto:hello@rrwindows.ca">Serving Victoria, BC</a></h4>
+						<h4 class="et_pb_module_header"><a href="mailto:edgewindow@hotmail.com">Serving Victoria, BC</a></h4>
 						
 					</div>
 				</div> <!-- .et_pb_blurb_content -->
@@ -247,10 +266,82 @@ body.custom-background { background-color: #1b4965; }
 				<div class="et_pb_module et_pb_text et_pb_text_0  et_pb_text_align_left et_pb_bg_layout_light">
 				
 				<!-- Contact form goes here -->
-				<div class="et_pb_text_inner"><div id="b0961567-fc14-42b2-a828-b4c301cf511b"></div>
-<link rel="stylesheet" media="screen" href="https://d3ey4dbjkt2f6s.cloudfront.net/assets/external/work_request_embed.css" />
-<script src="https://d3ey4dbjkt2f6s.cloudfront.net/assets/static_link/work_request_embed_snippet.js" clienthub_id="b0961567-fc14-42b2-a828-b4c301cf511b" form_url="https://clienthub.getjobber.com/client_hubs/b0961567-fc14-42b2-a828-b4c301cf511b/public/work_request/embedded_work_request_form"></script></div>
-			</div> <!-- .et_pb_text -->
+				<div class="et_pb_text_inner"><!--<div id="b0961567-fc14-42b2-a828-b4c301cf511b"></div>-->
+<!-- <link rel="stylesheet" media="screen" href="https://d3ey4dbjkt2f6s.cloudfront.net/assets/external/work_request_embed.css" /> -->
+<!-- <script src="https://d3ey4dbjkt2f6s.cloudfront.net/assets/static_link/work_request_embed_snippet.js" clienthub_id="b0961567-fc14-42b2-a828-b4c301cf511b" form_url="https://clienthub.getjobber.com/client_hubs/b0961567-fc14-42b2-a828-b4c301cf511b/public/work_request/embedded_work_request_form"></script></div> -->
+					<link rel="stylesheet" id="et-core-unified-44-cached-inline-styles" href="../wp-content/et-cache/44/et-core-unified-44-16767560154281.min.css" onerror="et_core_page_resource_fallback(this, true)" onload="et_core_page_resource_fallback(this)" />
+					<form id="contact-form">
+						<h2>New Request</h2>
+						<p>
+							Edge Window Cleaning (30 years experience) is eager to work with you! Whether you need one service or several, please fill out 
+							the form below with your contact and job details. This is the fatest and easiest way to ensure a call-back from us. We'll be chatting soon!
+						</p>
+						<label class="form-label fw-semibold">Contact details</label>
+						<div class="input-group">
+							<input type="text" class="form-control p-2" name="first_name" placeholder="First name (Required)" required>
+							<input type="text" class="form-control p-2" name="last_name" placeholder="Last name (Required)" required>
+						</div>
+						<div class="mb-3">
+							<input type="text" class="form-control p-2" name="company_name" placeholder="Company name (if applicable)">
+						</div>
+						<div class="mb-3">
+							<input type="email" class="form-control p-2" name="email" placeholder="Email (Required)" required>
+						</div>
+						<div class="mb-3">
+							<input type="text" class="form-control p-2" name="phone_number" placeholder="Phone number (Optional)" pattern="[0-9]{10}">
+							<div class="form-text">Phone number must be 10 digits long. By providing your phone number, you agree to receive text messages (SMS). Message and data rates may apply. Message frequency varies.</div>
+						</div>
+						
+						<label class="form-label fw-semibold">Address</label>
+						<div class="mb-3">
+							<input type="text" class="form-control p-2" name="street_1" placeholder="Street 1 (Required)" required>
+							<input type="text" class="form-control p-2" name="street_2" placeholder="Street 2 (Optional)">
+							<div class="input-group">
+								<input type="text" class="form-control p-2" name="city" placeholder="City (Required)" required>
+								<input type="text" class="form-control p-2" name="province" placeholder="Province (Required)" required>
+								<input type="text" class="form-control p-2" name="postal_code" placeholder="Postal code (Required)" required>
+							</div>
+						</div>
+
+						<h4>Service Details</h4>
+						<label class="form-label fw-semibold">Please provide as much information as you can</label>
+						<textarea class="form-control" name="details" rows="10" placeholder="Provide further details (Required). For example, describe the problems you are having." required></textarea>
+						<label class="form-label fw-semibold mt-1">Which Service(s) do you require?</label>
+						<div class="form-check">
+							<input class="form-check-input" name="window_cleaning" type="checkbox">
+							<label class="form-check-label">
+							  	Window Cleaning
+							</label>
+						</div>
+						<div class="form-check">
+							<input class="form-check-input" name="gutter_cleaning" type="checkbox">
+							<label class="form-check-label">
+							  	Gutter Cleaning
+							</label>
+						</div>
+						<div class="form-check">
+							<input class="form-check-input" name="moss_removal" type="checkbox">
+							<label class="form-check-label">
+							  	Moss Removal
+							</label>
+						</div>
+						<div class="form-check mb-3">
+							<input class="form-check-input" name="pressure_washing" type="checkbox">
+							<label class="form-check-label">
+							  	Pressure Washing
+							</label>
+						</div>
+						<div class="mb-3">
+							<button type="submit" style="border-radius: 1px;" class="btn btn-success ms-auto fw-semibold">Submit</button>
+						</div>
+						<div class="alert alert-success d-none" id="success-message" role="alert">
+							Job request sent successfully!
+						</div>
+						<div class="alert alert-danger d-none" id="fail-message" role="alert">
+							Failed to send job request. Please fill out the form properly!
+						</div>
+					</form>
+				</div> <!-- .et_pb_text -->
 			</div> <!-- .et_pb_column -->
 				
 				
@@ -339,5 +430,35 @@ var et_pb_sticky_elements = [];
 <script type='text/javascript' src='https://rrwindows-v1671080422.websitepro-cdn.com/wp-content/themes/Divi/js/custom.unified.js?ver=4.6.6' id='divi-custom-script-js'></script>
 <script type='text/javascript' src='https://rrwindows-v1671080422.websitepro-cdn.com/wp-content/themes/Divi/core/admin/js/common.js?ver=4.6.6' id='et-core-common-js'></script>
 <script type='text/javascript' src='https://rrwindows-v1671080422.websitepro-cdn.com/wp-includes/js/wp-embed.min.js?ver=5.5.11' id='wp-embed-js'></script>
+<!-- JavaScript for Bootstrap -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+<!-- Script for EmailJS -->
+<script type="text/javascript">
+	window.onload = function() {
+		document.getElementById('contact-form').addEventListener('submit', function(event) {
+			event.preventDefault();
+			const contactForm = this;
+			const successMessage = document.getElementById('success-message');
+			const failMessage = document.getElementById('fail-message');
+			if (!successMessage.classList.contains('d-none')) {
+				successMessage.classList.add('d-none');
+			}
+			if (!failMessage.classList.contains('d-none')) {
+				failMessage.classList.add('d-none');
+			}
+			// these IDs from the previous steps
+			emailjs.sendForm('contact_service', 'contact_form', this)
+				.then(function() {
+					console.log('SUCCESS!');
+					contactForm.reset();
+					successMessage.classList.remove('d-none');
+				}, function(error) {
+					console.log('FAILED...', error);
+					contactForm.reset();
+					failMessage.classList.remove('d-none');
+				});
+		});
+	}
+</script>
 </body>
 </html>
